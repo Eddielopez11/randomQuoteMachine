@@ -1,0 +1,23 @@
+{
+  "name": "randomQuoteMachine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddielopez11/randomQuoteMachine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eddielopez11/randomQuoteMachine/issues"
+  },
+  "homepage": "https://github.com/Eddielopez11/randomQuoteMachine#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
