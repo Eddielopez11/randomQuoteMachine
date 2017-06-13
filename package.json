@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Eddielopez11/randomQuoteMachine#readme",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.3"
   }
 }
