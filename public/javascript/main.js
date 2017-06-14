@@ -1,25 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var xhr = new XMLHttpRequest();
+  var currentQuote;
+  var quoteEl = document.querySelector("[data-js='quote']");
+  var authorEl = document.querySelector("[data-js='author']");
 
-  xhr.open('GET', 'https://talaikis.com/api/quotes/random/', true);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      console.log(xhr.responseText);
-    }
-  };
-  xhr.setRequestHeader('Accept', 'application/json');
-  xhr.send();
-
-  document.getElementById('newQuote').onclick = function newQuote () {
+  function getNewQuote() {
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'https://quotesondesign.com/wp-json/filter[id]=1111', true);
+    xhr.open('GET', 'http://quotes.stormconsultancy.co.uk/random.json', true);
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
-        console.log(xhr.responseText);
+        currentQuote = JSON.parse(xhr.responseText);
+        quoteEl.innerHTML = currentQuote.quote;
+        authorEl.innerHTML = currentQuote.author;
       }
     };
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.send();
   };
+
+  window.onload = function() {
+    getNewQuote();
+  };
+
+  document.getElementById('newQuote').onclick = function newQuote () {
+    getNewQuote();
+
+  };
+
+  console.log(currentQuote);
 });
