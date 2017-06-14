@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function getNewQuote() {
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'http://quotes.stormconsultancy.co.uk/random.json', true);
+    xhr.open('GET', 'https://quotes.stormconsultancy.co.uk/random.json', true);
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
         currentQuote = JSON.parse(xhr.responseText);
@@ -27,5 +27,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
   };
 
-  console.log(currentQuote);
 });
