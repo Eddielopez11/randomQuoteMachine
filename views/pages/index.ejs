@@ -9,6 +9,7 @@
   <body>
     <main class="main">
       <h1 class="mainTitle">Random Quote Machine</h1>
+    <div class="randomQuote__wrapper">
       <blockquote class="random__blockQuote">
         <i class="fa fa-quote-left fa-x faQuote" aria-hidden="true"></i>
         <p class="random__quote" data-js="quote"></p>
@@ -16,7 +17,10 @@
       </blockquote>
       <div class="random__buttonWrapper">
         <button class="random__newQuoteButton" id="newQuote">Get New Quote!</button>
+        <a class="twitter-share-button" href="" target="_blank" data-js="tweetLink"><button class="random__tweetOut" id="tweetOut"><i class="fa fa-twitter fa-1x tweeter" aria-hidden="true"></i>
+        </button></a>
       </div>
+    </div>
     </main>
     <script src="javascript/main.js" charset="utf-8"></script>
   </body>
